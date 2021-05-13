@@ -11,6 +11,7 @@ const Board = () => {
       </div>
       {'안타'}
       <BoardLists>
+        {/* map 돌아야함, history. */}
         <BoardItem />
       </BoardLists>
     </BoardWrap>

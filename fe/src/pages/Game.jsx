@@ -3,6 +3,7 @@ import useFetch from 'hooks/useFetch';
 import Header from 'components/GamePlay/playHeader/Header';
 import Main from 'components/GamePlay/playScreen/Main';
 import qs from 'qs';
+import Loading from 'components/GamePlay/Loading';
 // 쿼리값 읽고 데이터 페치 받은다음에 뿌려준다.
 export const gamePlayContext = React.createContext();
 
@@ -37,16 +38,18 @@ const Game = () => {
 
   // useEffect(() => {}, [out]);
 
-  if (loading) return <div>loading</div>;
-  const [home, away] = response.team_info;
-  const isFirstAttack = away.selected;
-
+  if (loading) return <Loading />;
+  // else {
+  //   const [home, away] = response.team_info;
+  //   const isFirstAttack = away.selected;
+  // }
   return (
-    <gamePlayContext.Provider value={{ home, away }}>
+    // <gamePlayContext.Provider value={{ home, away }}>
       <Header />
-      <Main />
-    </gamePlayContext.Provider>
+      // <Main />
+    // </gamePlayContext.Provider>
   );
+
 };
 
 export default Game;
