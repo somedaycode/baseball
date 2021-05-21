@@ -11,7 +11,7 @@ const noelMove1 = keyframes`
   transform: translate3d(0,0,0) scale(1.1);
 }
 50%{
-  transform: scale(1.3) translate3d(115px, -100px, 0);
+  transform: scale(1.5) translate3d(115px, -100px, 0);
 }
 100%{
   transform: translate3d(230px, -200px, 0) scale(1.0)
